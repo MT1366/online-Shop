@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  /* justify-content: flex-start; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 700px;
+  margin: 1rem;
+  box-shadow: 0px 0px 10px 3px rgba(128, 128, 128, 0.5);
+}
+
+.back-arrow {
+  display: flex;
+  position: absolute;
+  left: 2.2rem;
+  top: 2.2rem;
+  cursor: pointer;
+  /* float: left; */
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 1rem;
+
+  position: relative;
+  top: 10%;
+  /* gap: 5rem; */
+}
+
+.log-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+  top: 1rem;
+}
+
+.log-form h3 {
+  position: relative;
+  top: 2rem;
+  margin-bottom: 3rem;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.log-form #email {
+  background-image: url(../image/input-prefix.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #fafafa;
+}
+.log-form #pass {
+  background-image: url(../image/lock-fill.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #fafafa;
+}
+
+.remember-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+.remember-me p {
+  margin-bottom: 0;
+}
+
+.sing-in-btn {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  position: relative;
+  top: 30%;
+  width: 380px;
+  text-decoration: none;
+  color: white;
+  background: #212529;
+  border: 1px solid #212529;
+  border-radius: 30px;
+}

@@ -1,0 +1,165 @@
+.container {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 400px;
+    height: 700px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0px 0px 10px 3px rgba(128, 128, 128, 0.5);
+    overflow: auto;
+  }
+
+  
+.wish-list-header {
+    display: flex;
+    align-self: flex-start;
+    margin: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wish-list-header p:first-child {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    /* line-height: 24px; */
+    display: flex;
+    align-items: center;
+  
+    color: #152536;
+  }
+  
+
+  
+  .active {
+    color: white;
+    background-color: #343a40;
+  }
+  
+  .wish-list-btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 1rem;
+  }
+  
+  .wish-list-btns a {
+    text-decoration: none;
+    border: 3px solid #343a40;
+    border-radius: 20px;
+    color: #343a40;
+    padding: 0.2rem .8rem;
+  }
+
+  .wish-list-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .wish-list-left p{
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: black
+  }
+
+/* wishlist products */
+
+  .whish-list-product {
+    display: flex;
+    margin: 1.5rem 0.5rem;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .whish-list-product div {
+    line-height: 0.5;
+  }
+
+  .whish-list-product div p:nth-child(2){
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    /* line-height: 24px; */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+
+    /* Heading/Title Color */
+
+    color: #152536;
+  }
+
+  .whish-list-product div p:nth-child(4){
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 19px; */
+    display: flex;
+    align-items: center;
+    
+    
+    color: #152536;
+  }
+
+
+  .product-info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+
+  .product-info span{
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #2e3c4d;
+  }
+  
+  .whish-list-product img {
+    /* width: 70%; */
+    padding: 0.5rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 10%;
+    justify-content: center;
+    background-color: #f3f3f3;
+  }
+
+.product-rate{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.product-rate span:last-child{
+    border-right:  1px solid black;
+    padding-right: 10px;
+}
+
+  .sold-info p{
+    background-color: rgb(230, 227, 227);
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 10px;
+  }

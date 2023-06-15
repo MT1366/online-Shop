@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/loginpage.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Login Page</title>
+  </head>
+  <body>
+    <section action="" id="container">
+      <img src="./assets/image/back.png" alt="" class="back-arrow" />
+
+      <section class="login-section">
+        <div class="logo">
+          <img src="./assets/image/login-icon.png" alt="" width="40px" />
+        </div>
+
+        <section class="log-form form">
+          <h3>Login to Your Account</h3>
+          <div class="form">
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="  Username"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="email"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="  password"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="pass"
+              />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="remember-me">
+            <input type="checkbox" name="" id="" />
+            <p>Remember Me</p>
+          </div>
+        </section>
+
+        <button type="submi" class="sing-in-btn" id="button" href="">
+          Sign In
+        </button>
+      </section>
+    </section>
+    <script type="module" src="./assets/script/logIn.js"></script>
+  </body>
+</html>

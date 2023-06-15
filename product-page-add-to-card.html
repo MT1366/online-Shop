@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/productPageAddToCart.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+
+    <title>Product page - add to cart</title>
+  </head>
+  <body>
+    <section action="" id="container">
+      <div class="product-img">
+        <img src="./assets/image/back.png" alt="" class="back-arrow" />
+        <p>- - -</p>
+      </div>
+
+      <div class="product-information">
+        <div class="product-information-header">
+          <p>Air Jordan 3 Retro</p>
+          <img src="./assets/image/like.png" alt="" />
+        </div>
+
+        <div class="product-info">
+          <span class="sold-info"> 7,434 sold</span>
+          <img src="./assets/image/star-half.svg" alt="" />
+          <span class="viewers"> 4.8 (3,895 viewers)</span>
+        </div>
+        <hr />
+        <div class="desc">
+          <h4>Description</h4>
+          <p>
+            In ultricies fermentum aliquet. Pellentesque dui magna, condimentum
+            non ullamcorp
+          </p>
+        </div>
+
+        <div id="title">
+          <p>Size</p>
+          <p>Color</p>
+        </div>
+
+        <div class="size-color">
+          <div class="product-sizes">
+            <a>42</a>
+            <a>41</a>
+            <a>40</a>
+          </div>
+
+          <div class="product-colors">
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-quantity">
+        <p class="quantity">Quantity</p>
+
+        <div class="add-remove">
+          <p class="remove">-</p>
+          <p>1</p>
+          <p class="add">+</p>
+        </div>
+      </div>
+
+      <hr />
+      <section class="add-to-cart">
+        <div class="price">
+          <p>Total Price</p>
+          <p>$ 2.400</p>
+        </div>
+
+        <a class="add-btn"><i class="bi bi-lock-fill"></i> Add to cart </a>
+      </section>
+    </section>
+    <script type="module" src="./assets/script/productPageScript.js"></script>
+  </body>
+</html>
