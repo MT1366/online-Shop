@@ -86,17 +86,26 @@ const getShoe = async function (brand) {
 
     const productInformation = document.querySelector(".product-information");
     const like = document.querySelectorAll(".product-like");
+    const container = document.querySelectorAll("#container");
+    const likeArray = [];
 
-    like.forEach((heart, i) => {
-      heart.addEventListener("click", function () {
-        heart.classList.toggle("heart-fill");
+    container.forEach((cont, j) => {
+      like.forEach((heart, i) => {
+        // console.log(container);
+        heart.addEventListener("click", function () {
+          heart.classList.toggle("heart-fill");
 
-        // heart.src = "./assets/image/heart-fill.svg";
-        // heart.style.width = "25px";
+          if (j === i) {
+            likeArray.push(cont);
+
+            console.log(likeArray);
+          }
+
+          // heart.src = "./assets/image/heart-fill.svg";
+          // heart.style.width = "25px";
+        });
       });
     });
-
-    const container = document.querySelector("#container");
 
     const add = document.querySelectorAll(".add");
     const remove = document.querySelectorAll(".remove");

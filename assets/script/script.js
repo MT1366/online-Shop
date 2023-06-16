@@ -440,7 +440,6 @@ db.products.bulkAdd([
   db.products.toArray().then((data) => {
     data.forEach((element) => {
       const { id, brand, name, price, image, sizes, colors, desc } = element;
-
       html += `<div class = ${element.brand}>
         <img class="product-image" src="${element.image}" alt="" />
         <p class="brand">${element.brand}</p>
