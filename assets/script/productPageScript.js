@@ -1,3 +1,6 @@
+import "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js";
+
+
 const productSection = document.body;
 let html = ``;
 
@@ -84,6 +87,8 @@ const getShoe = async function (brand) {
     productSection.innerHTML = html;
     // container.insertAdjacentHTML("beforeend", html);
 
+
+
     const productInformation = document.querySelector(".product-information");
     const like = document.querySelectorAll(".product-like");
     const container = document.querySelectorAll("#container");
@@ -104,14 +109,41 @@ const getShoe = async function (brand) {
           // heart.src = "./assets/image/heart-fill.svg";
           // heart.style.width = "25px";
         });
+ 
       });
     });
+
+      // const password = document.querySelector("#pass").value;
+      // const email = document.querySelector("#email").value;
+  
 
     const add = document.querySelectorAll(".add");
     const remove = document.querySelectorAll(".remove");
     const pQ = document.querySelectorAll(".p-q");
 
     let elemPrice = document.querySelectorAll(".element-price");
+
+       const addBtn = document.querySelectorAll('.add-btn');
+
+        
+        addBtn.forEach((btn, i) => btn.addEventListener('click', ()=> {
+          data.forEach((d,j) => {
+            if (i === j) {
+              console.log(d)
+                  axios
+              .post("https://648846b20e2469c038fd62ce.mockapi.io/wishlistUsers", {
+                    id: d.id,
+                    brand: d.brand,
+                    name: d.name,
+                    price: d.price,
+                    image: d.image,
+                    colors: d.colors,
+                    sizes: d.sizes,
+                    description: d.description
+                  })
+            }
+          })
+        }))
 
     add.forEach((btn, i) => {
       btn.addEventListener("click", function () {
