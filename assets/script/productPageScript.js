@@ -141,9 +141,9 @@ const getShoe = async function (brand) {
                     sizes: d.sizes,
                     description: d.description
                   })
-            }
-          })
-        }))
+                }
+              })
+            }))
 
     add.forEach((btn, i) => {
       btn.addEventListener("click", function () {

@@ -440,14 +440,27 @@ db.products.bulkAdd([
   db.products.toArray().then((data) => {
     data.forEach((element) => {
       const { id, brand, name, price, image, sizes, colors, desc } = element;
-      html += `<div class = ${element.brand}>
+      html += `<div class = component  ${element.brand}>
         <img class="product-image" src="${element.image}" alt="" />
         <p class="brand">${element.brand}</p>
         <p class="price">$ ${element.price}</p>
       </div>`;
 
       productSection.innerHTML = html;
-    });
+
+      const comp = document.querySelectorAll('.component')
+      comp.forEach((product,i) => {
+        product.addEventListener('click', function(){
+          data.forEach ((el,j) => {
+            if (i === j) {
+              window.location.href = `http://127.0.0.1:5500/product-page-add-to-card.html?id=${el.id}`
+            }
+          })
+        });
+      });
+
+    })
+
   }),
   nikeButton.addEventListener("click", function () {
     db.products
