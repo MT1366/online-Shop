@@ -633,47 +633,5 @@ converseButton
     console.log(error);
   });
 
-// export { jsonData };
+export { db };
 
-// Using API ////////////////
-
-// const getShoes = async function () {
-//   const url = await fetch(
-//     `https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope`
-//   );
-
-//   // const mainPage = document.getElementById('app')
-//   const data = await url.json();
-
-//   data.forEach((element) => {
-//     html += `<div class = ${element.brand}>
-//               <img class="product-image" src="${element.image}" alt="" />
-//               <p class="brand">${element.brand}</p>
-//               <p class="price">$ ${element.price}</p>
-//             </div>`;
-//     productSection.innerHTML = html;
-//   });
-// };
-// getShoes();
-
-// const getShoe = async function (brand) {
-//   const url = await fetch(
-//     `https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope?brand=${brand}`
-//   );
-
-//   // const mainPage = document.getElementById('app')
-//   const data = await url.json();
-
-//   data.forEach((element) => {
-//     html = "";
-//     pumaHtml += `<div class = ${element.brand}>
-//               <img class="product-image" src="${element.image}" alt="" />
-//               <p class="brand">${element.brand}</p>
-//               <p class="price">$ ${element.price}</p>
-//             </div>`;
-//     productSection.innerHTML = pumaHtml;
-//   });
-// };
-// // getShoe("Nike");
-
-// pumaButton.addEventListener("click", getShoe("Puma"));

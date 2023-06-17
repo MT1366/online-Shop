@@ -1,10 +1,10 @@
 import "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js";
-
+import { db } from "./script";
 
 const productSection = document.body;
 let html = ``;
 
-const getShoe = async function (brand) {
+const getShoe = async function (id) {
   const url = await fetch(
     "https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope"
   );
@@ -85,9 +85,6 @@ const getShoe = async function (brand) {
       </section>
       </section>`;
     productSection.innerHTML = html;
-    // container.insertAdjacentHTML("beforeend", html);
-
-
 
     const productInformation = document.querySelector(".product-information");
     const like = document.querySelectorAll(".product-like");
@@ -105,17 +102,10 @@ const getShoe = async function (brand) {
 
             console.log(likeArray);
           }
-
-          // heart.src = "./assets/image/heart-fill.svg";
-          // heart.style.width = "25px";
         });
  
       });
-    });
-
-      // const password = document.querySelector("#pass").value;
-      // const email = document.querySelector("#email").value;
-  
+    });  
 
     const add = document.querySelectorAll(".add");
     const remove = document.querySelectorAll(".remove");
