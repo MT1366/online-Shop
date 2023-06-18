@@ -440,7 +440,7 @@ db.products.bulkAdd([
   db.products.toArray().then((data) => {
     data.forEach((element) => {
       const { id, brand, name, price, image, sizes, colors, desc } = element;
-      html +=  `<div class = "component ${id} ${brand}">
+      html += `<div class = "component ${id} ${brand}">
         <img class="product-image" src="${image}" alt="" />
         <p class="brand">${brand}</p>
         <p class="price">$ ${price}</p>
@@ -448,21 +448,19 @@ db.products.bulkAdd([
 
       productSection.innerHTML = html;
 
-      const comp = document.querySelectorAll('.component')
-      comp.forEach((product,i) => {
-        product.addEventListener('click', function(){
-          data.forEach ((el,j) => {
+      const comp = document.querySelectorAll(".component");
+      comp.forEach((product, i) => {
+        product.addEventListener("click", function () {
+          data.forEach((el, j) => {
             if (i === j) {
-              console.log(el)
+              axios.fetch(`http://localhost:3000/?id=${el.id}`, {});
 
-              window.location.href = `http://127.0.0.1:5500/product-page-add-to-card.html?id=${el.id}`
+              console.log(el);
             }
-          })
+          });
         });
       });
-
-    })
-
+    });
   }),
   nikeButton.addEventListener("click", function () {
     db.products
@@ -636,4 +634,3 @@ converseButton
   });
 
 // export { db };
-

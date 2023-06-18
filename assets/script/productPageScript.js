@@ -5,15 +5,12 @@ const productSection = document.body;
 let html = ``;
 
 const getShoe = async function (id) {
-  const url = await fetch(
-    "https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope"
-    // `https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope?id=${id}`
-  );
+  const url = await fetch(`http://localhost:3000/product?=id${id}`);
 
   const data = await url.json();
 
   data.forEach((element) => {
-    console.log(element.id)
+    console.log(element);
     html += `<section action="" id="container">
     <div class="product-img" style="background-image: url(${element.image});">
         <img src="./assets/image/back.png" alt="" class="back-arrow" />
@@ -96,17 +93,16 @@ const getShoe = async function (id) {
       like.forEach((heart, i) => {
         // console.log(container);
         heart.addEventListener("click", function () {
-          cont.style.display = "none"
+          cont.style.display = "none";
           heart.classList.toggle("heart-fill");
 
           if (j === i) {
             // likeArray.push(cont);
-            cont.style.display = "flex"
+            cont.style.display = "flex";
           }
         });
- 
       });
-    });  
+    });
 
     const add = document.querySelectorAll(".add");
     const remove = document.querySelectorAll(".remove");
@@ -114,27 +110,30 @@ const getShoe = async function (id) {
 
     let elemPrice = document.querySelectorAll(".element-price");
 
-       const addBtn = document.querySelectorAll('.add-btn');
+    const addBtn = document.querySelectorAll(".add-btn");
 
-        
-        addBtn.forEach((btn, i) => btn.addEventListener('click', ()=> {
-          data.forEach((d,j) => {
-            if (i === j) {
-              console.log(d)
-                  axios
-              .post("https://648846b20e2469c038fd62ce.mockapi.io/wishlistUsers", {
-                    id: d.id,
-                    brand: d.brand,
-                    name: d.name,
-                    price: d.price,
-                    image: d.image,
-                    colors: d.colors,
-                    sizes: d.sizes,
-                    description: d.description
-                  })
-                }
-              })
-            }))
+    addBtn.forEach((btn, i) =>
+      btn.addEventListener("click", () => {
+        data.forEach((d, j) => {
+          if (i === j) {
+            console.log(d);
+            axios.post(
+              "https://648846b20e2469c038fd62ce.mockapi.io/wishlistUsers",
+              {
+                id: d.id,
+                brand: d.brand,
+                name: d.name,
+                price: d.price,
+                image: d.image,
+                colors: d.colors,
+                sizes: d.sizes,
+                description: d.description,
+              }
+            );
+          }
+        });
+      })
+    );
 
     add.forEach((btn, i) => {
       btn.addEventListener("click", function () {
