@@ -1,5 +1,5 @@
 import "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js";
-import { db } from "./script";
+// import { db } from "./script";
 
 const productSection = document.body;
 let html = ``;
@@ -7,12 +7,13 @@ let html = ``;
 const getShoe = async function (id) {
   const url = await fetch(
     "https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope"
+    // `https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope?id=${id}`
   );
 
   const data = await url.json();
 
   data.forEach((element) => {
-    // console.log(element);
+    console.log(element.id)
     html += `<section action="" id="container">
     <div class="product-img" style="background-image: url(${element.image});">
         <img src="./assets/image/back.png" alt="" class="back-arrow" />
@@ -95,12 +96,12 @@ const getShoe = async function (id) {
       like.forEach((heart, i) => {
         // console.log(container);
         heart.addEventListener("click", function () {
+          cont.style.display = "none"
           heart.classList.toggle("heart-fill");
 
           if (j === i) {
-            likeArray.push(cont);
-
-            console.log(likeArray);
+            // likeArray.push(cont);
+            cont.style.display = "flex"
           }
         });
  
@@ -159,4 +160,4 @@ const getShoe = async function (id) {
   });
 };
 
-getShoe();
+getShoe("31");

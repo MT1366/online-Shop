@@ -36,27 +36,27 @@ filterBtnSection.addEventListener("mouseleave", function () {
   });
 });
 
-// searchBar.addEventListener("input", function () {
-//   db.products
-//     .where("brand")
-//     .equals(searchBar.value)
-//     .toArray()
-//     .then((data) => {
-//       console.log(data);
-//       data.forEach((element) => {
-//         const { id, brand, name, price, image, sizes, description } = element;
+searchBar.addEventListener("input", function () {
+  db.products
+    .where("brand")
+    .equals(searchBar.value)
+    .toArray()
+    .then((data) => {
+      console.log(data);
+      data.forEach((element) => {
+        const { id, brand, name, price, image, sizes, description } = element;
 
-//         html = `<div class = ${brand === searchBar.value ? "show" : "hidden"}>
-//           <img class="product-image" src="${image}" alt="" />
-//           <p class="brand">${brand}</p>
-//           <p class="price">$ ${price}</p>
-//         </div>`;
-//         productSection.innerHTML = html;
+        html = `<div class = ${brand === searchBar.value ? "show" : "hidden"}>
+          <img class="product-image" src="${image}" alt="" />
+          <p class="brand">${brand}</p>
+          <p class="price">$ ${price}</p>
+        </div>`;
+        productSection.innerHTML = html;
 
-//         productSection.insertAdjacentHTML("beforeend", html);
-//       });
-//     });
-// });
+        productSection.insertAdjacentHTML("beforeend", html);
+      });
+    });
+});
 
 const productSection = document.querySelector(".product-section");
 
@@ -440,10 +440,10 @@ db.products.bulkAdd([
   db.products.toArray().then((data) => {
     data.forEach((element) => {
       const { id, brand, name, price, image, sizes, colors, desc } = element;
-      html += `<div class = component  ${element.brand}>
-        <img class="product-image" src="${element.image}" alt="" />
-        <p class="brand">${element.brand}</p>
-        <p class="price">$ ${element.price}</p>
+      html +=  `<div class = "component ${id} ${brand}">
+        <img class="product-image" src="${image}" alt="" />
+        <p class="brand">${brand}</p>
+        <p class="price">$ ${price}</p>
       </div>`;
 
       productSection.innerHTML = html;
@@ -453,6 +453,8 @@ db.products.bulkAdd([
         product.addEventListener('click', function(){
           data.forEach ((el,j) => {
             if (i === j) {
+              console.log(el)
+
               window.location.href = `http://127.0.0.1:5500/product-page-add-to-card.html?id=${el.id}`
             }
           })
@@ -633,5 +635,5 @@ converseButton
     console.log(error);
   });
 
-export { db };
+// export { db };
 
