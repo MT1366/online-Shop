@@ -6,14 +6,15 @@ let html = ``;
 
 const getShoe = async function (id) {
   const url = await fetch(
-    "https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope"
-    // `https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope?id=${id}`
+    // `http://127.0.0.1:5500/product-page-add-to-card.html?id={id}`
+        // "https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope"
+    `https://648846b20e2469c038fd62ce.mockapi.io/ShoeShope?id=${id}`
   );
 
   const data = await url.json();
 
   data.forEach((element) => {
-    console.log(element.id)
+    console.log(element)
     html += `<section action="" id="container">
     <div class="product-img" style="background-image: url(${element.image});">
         <img src="./assets/image/back.png" alt="" class="back-arrow" />
