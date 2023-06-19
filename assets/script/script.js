@@ -454,8 +454,8 @@ db.products.bulkAdd([
           data.forEach ((el,j) => {
             if (i === j) {
               console.log(el)
-              html = `<section action="" id="container-inner">
-              <div class="product-img" style="background-image: url(${element.image});">
+              html = `<section action="" id="inner-container">
+              <div class="inner-product-img" style="background-image: url(${element.image});">
                   <img src="./assets/image/back.png" alt="" class="back-arrow" />
                   <p>- - -</p>
                 </div>
